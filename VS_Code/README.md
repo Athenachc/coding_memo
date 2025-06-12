@@ -1,0 +1,2 @@
+### Extensions
+- ChatGPT: ChatGPT - EasyCode
