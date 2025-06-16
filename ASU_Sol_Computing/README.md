@@ -4,6 +4,7 @@
 
 2. Open a new terminal.
 ```
-ssh ASURITE@login.sol.rc.asu.edu #ASURITE is your own ASURITE login name
+ssh ASURITE@login.sol.rc.asu.edu
+# ASURITE is your own ASURITE login name
 ```
 Then, enter your ASURITE password.
