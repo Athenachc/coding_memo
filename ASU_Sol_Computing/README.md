@@ -3,8 +3,10 @@
 *For uninterrupted access to the supercomputer, please connect to the [Cisco AnyConnect Client VPN](https://sslvpn-im.asu.edu/CACHE/stc/1/index.html).
 
 2. Open a new terminal.
-```
+   
+```bash
 ssh ASURITE@login.sol.rc.asu.edu
 # ASURITE is your own ASURITE login name
 ```
+
 Then, enter your ASURITE password.
