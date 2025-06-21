@@ -3,7 +3,13 @@
 sudo apt-get install terminator
 ```
 
-#### Install Git
+### Install Git
 ```
 sudo apt install git
+```
+
+
+### Install CMake
+```
+sudo apt install cmake
 ```
