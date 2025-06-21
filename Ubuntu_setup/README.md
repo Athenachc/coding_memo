@@ -8,6 +8,7 @@ sudo apt-get install terminator
 sudo apt install git
 ```
 
+### Install ROS
 
 ### Install CMake
 ```
