@@ -12,3 +12,6 @@ ssh ASURITE@login.sol.rc.asu.edu
 ```
 
 Then, enter your ASURITE password.
+
+### Notes for Ubuntu setup
+[Note](https://jyalim.github.io/agave-shell-novice/setup.html)
