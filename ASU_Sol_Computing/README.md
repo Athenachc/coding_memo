@@ -26,6 +26,6 @@ E.g.:
 ```bash
 cd /scratch/hcheung6/
 ````
-
+---
 ### Notes for MacOS/Ubuntu setup
 [Note](https://jyalim.github.io/agave-shell-novice/setup.html)
