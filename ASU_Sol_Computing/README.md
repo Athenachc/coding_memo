@@ -10,6 +10,7 @@
 ssh ASURITE@login.sol.rc.asu.edu
 # ASURITE is your own ASURITE login name
 ```
+E.g.:
 ```bash
 ssh hcheung6@login.sol.rc.asu.edu
 ```
@@ -21,6 +22,7 @@ Then, enter your ASURITE password.
 cd /scratch/ASURITE/
 # ASURITE is your own ASURITE login name
 ```
+E.g.:
 ```bash
 cd /scratch/hcheung6/
 ````
