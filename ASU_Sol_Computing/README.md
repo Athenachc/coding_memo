@@ -27,5 +27,5 @@ E.g.:
 cd /scratch/hcheung6/
 ````
 ---
-### Notes for MacOS/Ubuntu setup
-[Note](https://jyalim.github.io/agave-shell-novice/setup.html)
+### [Notes](https://jyalim.github.io/agave-shell-novice/setup.html) for MacOS/Ubuntu setup
+
