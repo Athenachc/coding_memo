@@ -15,3 +15,7 @@
 
 ### Close the current pane
 <Ctrl+b> followed by x
+
+### Scrolling
+<Ctrl+b> followed by [
+(Quit: q)
