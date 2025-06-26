@@ -2,10 +2,16 @@
 
 ## tmux in MacOS
 ### Split window horizontally
-Press: <Ctrl+b> + "
+<Ctrl+b> followed by "
 
 ### Split window vertically
-Press: <Ctrl+b> + %
+<Ctrl+b> followed by %
 
 ### Switch between panes
-Press: <Ctrl+b> + arrow key
+<Ctrl+b> followed by arrow key
+
+### Resize panes
+<Ctrl+b> followed by Ctrl + arrow key
+
+### Close the current pane
+<Ctrl+b> followed by x
