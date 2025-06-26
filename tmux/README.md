@@ -8,4 +8,4 @@ Press: <Ctrl+b> + "
 Press: <Ctrl+b> + %
 
 ### Switch between panes
-Press: <Ctrl+b> + <arrow key>
+Press: <Ctrl+b> + arrow key
