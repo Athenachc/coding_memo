@@ -1,6 +1,8 @@
-## Ubuntu 20.04 Installation on laptop (i7, RTX 5060, Dual system with Win 11)
+## Ubuntu 22.04 Installation on laptop (i7, RTX 5060, Dual system with Win 11)
+* Can't install Ubuntu 20.04 successfully (No wifi module detection, no SSD detection)
+  
 ### Preparation
-1. Prepare an Ubuntu 20.04 installation USB
+1. Prepare an Ubuntu 22.04 installation USB
 2. Shrink partition on a SSD on Win 11
 3. Change boot order to USB in BIOS
 4. Install Ubuntu
@@ -8,6 +10,7 @@
 ### Solve low resolution e.g. 800x600 (can't see buttons on installation window)
 1. Turn off "bitlocker" in Windows 11
 2. Turn off "security boot" in BIOS
+
 
 ### Install Terminator
 ```
