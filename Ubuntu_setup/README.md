@@ -2,7 +2,7 @@
 * Can't install Ubuntu 20.04 successfully (No wifi module detection, no SSD detection)
   
 ### Preparation
-1. Prepare an Ubuntu 22.04 installation USB
+1. Prepare an Ubuntu 22.04 installation USB by [Rufus](https://rufus.ie/downloads/)
 2. Shrink partition on a SSD on Win 11
 3. Change boot order to USB in BIOS
 4. Install Ubuntu
@@ -12,7 +12,7 @@
 2. Turn off "security boot" in BIOS
 
 ### Solve Wifi detection (can't see wifi and bluetooth options in setting)
-1. Download latest version of Ubuntu 22.04 and re-prepare an Ubuntu installation USB
+1. Download latest version of [Ubuntu 22.04](https://releases.ubuntu.com/jammy/) and re-prepare an Ubuntu installation USB
 2. Re-do the steps in [Preparation](#preparation)
 
 ### Install Terminator
