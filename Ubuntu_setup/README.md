@@ -13,7 +13,7 @@
 
 ### Solve Wifi detection (can't see wifi and bluetooth options in setting)
 1. Download latest version of Ubuntu 22.04 and re-prepare an Ubuntu installation USB
-2. Re-do the steps in ### Preparation
+2. Re-do the steps in [Preparation]
 
 ### Install Terminator
 ```
