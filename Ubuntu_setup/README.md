@@ -210,6 +210,16 @@ Reboot:
 ```
 sudo reboot
 ```
+## Fix Incorrect Windows Time In Linux Dual Boot
+```bash
+timedatectl
+```
+We can see *RTC in local TZ: **no***
 
+```bash
+timedatectl set-local-rtc 1 --adjust-system-clock
+timedatectl
+```
+Then we can see *RTC in local TZ: **yes***
 
 
