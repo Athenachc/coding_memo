@@ -97,9 +97,121 @@ sudo ./NVIDIA-Linux-x86_64-570.169.run -no-x-check -no-nouveau-check
 *Would you like to run the nvidia-xconfig utility to automatically update you X configuration file so that the NVIDIA X driver will be used when you restart X? Any pre-existing X configuration file will be backed up.* --> YES
 
 If the Nvidia driver is successfully installed, then the following text is shown:
+
 *Your X configuration file has been successfully updated. Installation of the NVIDIA Accelerated Graphics Driver for Linux-x86_64 (version:535.113.01) is now complete.*
+
+Check driver version
+```bash
+nvidia-smi
+```
 
 Reboot
 ```bash
 sudo service lightdm start && reboot
 ```
+
+### If the Ubuntu GUI remains black after rebooting, try (thx to ChatGPT)
+1. Disable Secure Boot in BIOS.
+
+2. Install nvidia-prime (if not yet installed)
+```
+sudo apt install nvidia-prime
+```
+Then set to NVIDIA:
+```bash
+sudo prime-select nvidia
+sudo reboot
+```
+
+3. Ensure NVIDIA kernel modules are loaded
+```bash
+lsmod | grep nvidia
+```
+We should see multiple entries like:
+```
+nvidia_uvm
+nvidia_drm
+nvidia_modeset
+nvidia
+```
+If nothing appears, load them manually:
+```bash
+sudo modprobe nvidia
+```
+Then, re-check with 
+```bash
+lsmod | grep nvidia
+```
+
+4. If you input
+```
+prime-select query
+```
+and it shows
+```
+on-demand
+```
+Please ensure you finish step 2.
+
+5. Force use of Xorg (disable Wayland completely)
+   
+Edit GDM configuration:
+```bash
+sudo nano /etc/gdm3/custom.conf
+```
+Ensure these lines are set:
+```bash
+WaylandEnable=false
+```
+Uncomment it if commented. Save with Ctrl+O, Enter, Ctrl+X.
+
+Then reboot:
+```bash
+sudo systemctl restart gdm3
+```
+or
+```bash
+reboot
+```
+
+6. Regenerate Xorg configuration for NVIDIA
+```bash
+sudo nvidia-xconfig
+sudo reboot
+```
+
+7. Set NVIDIA DRM kernel modeset
+Ensure your GRUB config enables modeset.
+```bash
+sudo nano /etc/default/grub
+```
+Find:
+```bash
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+```
+Change to:
+```bash
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash nvidia-drm.modeset=1"
+```
+Save and update GRUB:
+```bash
+sudo update-grub
+sudo reboot
+```
+
+8. Check your display manager (GDM vs LightDM)
+   
+If using GDM3, sometimes switching to LightDM fixes black screen issues:
+```bash
+sudo apt install lightdm
+sudo dpkg-reconfigure lightdm
+```
+Select LightDM as default. 
+
+Reboot:
+```
+sudo reboot
+```
+
+
+
