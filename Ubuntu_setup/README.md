@@ -14,17 +14,17 @@
 ### Solve Wifi detection (can't see wifi and bluetooth options in setting)
 1. Download latest version of [Ubuntu 22.04](https://releases.ubuntu.com/jammy/) and re-prepare an Ubuntu installation USB
 2. Re-do the steps in [Preparation](#preparation)
-
+---
 ## Install Terminator
 ```
 sudo apt-get install terminator
 ```
-
+---
 ## Install Git
 ```
 sudo apt install git
 ```
-
+---
 ## Install NVIDIA driver
 ### 1. Install gcc-12
 ```bash
@@ -107,7 +107,7 @@ Reboot
 ```bash
 sudo service lightdm start && reboot
 ```
-
+---
 ## [NVIDIA Driver Issue] If the Ubuntu GUI remains black after rebooting, try (thx to ChatGPT)
 ### 1. Disable Secure Boot in BIOS.
 
@@ -210,6 +210,7 @@ Reboot:
 ```
 sudo reboot
 ```
+---
 ## Fix Incorrect Windows Time In Linux Dual Boot
 ```bash
 timedatectl
