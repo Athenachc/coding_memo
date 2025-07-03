@@ -108,7 +108,7 @@ Reboot
 sudo service lightdm start && reboot
 ```
 
-## If the Ubuntu GUI remains black after rebooting, try (thx to ChatGPT)
+## [NVIDIA Driver Issue] If the Ubuntu GUI remains black after rebooting, try (thx to ChatGPT)
 ### 1. Disable Secure Boot in BIOS.
 
 ### 2. Install nvidia-prime (if not yet installed)
