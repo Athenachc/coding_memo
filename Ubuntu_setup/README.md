@@ -26,3 +26,12 @@ sudo apt install git
 ```
 
 ### Install ROS
+
+### Install NVIDIA driver
+1. Install gcc-12
+```bash
+sudo apt install --reinstall gcc-12
+sudo ln -s -f /usr/bin/gcc-12 /usr/bin/gcc
+gcc --version
+```
+
