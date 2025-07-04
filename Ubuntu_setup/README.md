@@ -222,6 +222,7 @@ timedatectl set-local-rtc 1 --adjust-system-clock
 timedatectl
 ```
 Then we can see *RTC in local TZ: **yes***
+
 ---
 ## Change keyboard blacklight
 1. Run
