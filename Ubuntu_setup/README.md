@@ -247,3 +247,29 @@ cat /sys/class/leds/asus::kbd_backlight/max_brightness
 echo X | sudo tee /sys/class/leds/asus::kbd_backlight/brightness
 ```
 Replace `X` with brightness vaule
+
+---
+## Change maximum battery charging power
+1. Install TLP
+```
+sudo apt install tlp tlp-rdw
+sudo tlp start
+```
+2. Enable and start TLP service
+```
+sudo systemctl enable tlp.service
+sudo systemctl start tlp.service
+```
+3. Open TLP config:
+```
+sudo nano /etc/tlp.conf
+```
+4. Find (or add/uncomment) these lines for battery:
+```
+START_CHARGE_THRESH_BAT0=40
+STOP_CHARGE_THRESH_BAT0=80
+```
+5. Apply config changes:
+```
+sudo tlp start
+```
