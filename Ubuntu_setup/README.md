@@ -222,5 +222,27 @@ timedatectl set-local-rtc 1 --adjust-system-clock
 timedatectl
 ```
 Then we can see *RTC in local TZ: **yes***
+---
+## Change keyboard blacklight
+1. Run
+```
+ls /sys/class/leds/
+```
+Look for entries related to your keyboard backlight. Sometimes they are called `asus::kbd_backlight` or similar.
 
 
+2. Then check the current brightness level:
+```
+cat /sys/class/leds/asus::kbd_backlight/brightness
+```
+
+3. See the maximum brightness value supported:
+```
+cat /sys/class/leds/asus::kbd_backlight/max_brightness
+```
+
+4. Set the brightness
+```
+echo X | sudo tee /sys/class/leds/asus::kbd_backlight/brightness
+```
+Replace `X` with brightness vaule
