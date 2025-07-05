@@ -1,4 +1,4 @@
-# ASU Sol Computing
+# ASU Sol Computing [link](https://asurc.atlassian.net/wiki/spaces/RC/overview)
 
 ## Login (MacOS/Ubuntu)
 ### 1. Connect to ASU VPN: [link](https://asurc.atlassian.net/wiki/spaces/RC/pages/1905131521/Connecting+to+the+Supercomputers+with+SSH)
