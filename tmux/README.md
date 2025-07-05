@@ -16,3 +16,8 @@
 ### Scrolling
 <Ctrl+b> followed by [\
 (Quit: q)
+
+### Kill all tmux sessions
+```bash
+pkill tmux
+```
