@@ -28,4 +28,5 @@ cd /scratch/hcheung6/
 ````
 ---
 ## Web Portal: [link](https://asurc.atlassian.net/wiki/spaces/RC/overview)
+1. Request GPU: [link](https://asurc.atlassian.net/wiki/spaces/RC/pages/1908998178/Sol+Hardware+-+How+to+Request)
 
