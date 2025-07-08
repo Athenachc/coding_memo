@@ -24,6 +24,12 @@ sudo apt-get install terminator
 ```
 sudo apt install git
 ```
+
+## Install net-tools
+```
+sudo apt install net-tools
+```
+
 ---
 ## Install NVIDIA driver
 ### 1. Install gcc-12
