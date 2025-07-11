@@ -47,8 +47,8 @@ The terminal will show ngrok information:\
 Next to `Forwarding`, you should see something like: *tcp://x.tcp.yyy.ngrok.io:zzzzz -> localhost:22*.\
 where:\
 - `x` is a single-digit number
--`yyy` is the region
--`zzzzz` is a 5-digit port number
+- `yyy` is the region
+- `zzzzz` is a 5-digit port number
 
 On your remote machine (i.e. the computer you want to use to control the above computer), open a terminal and run:
 ```
