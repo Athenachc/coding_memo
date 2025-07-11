@@ -44,12 +44,13 @@ chmod +x ngrok.sh
 ./ngrok.sh
 ```
 The terminal will show ngrok information:\
-In `Forwarding`, there should be *tcp://x.tcp.yyy.ngrok.io:zzzzz -> localhost:22*.\
-`x` is a 1-digit number\
-`yyy` is the region\
-`zzzzz` is a 5-digit password
+Next to `Forwarding`, you should see something like: *tcp://x.tcp.yyy.ngrok.io:zzzzz -> localhost:22*.\
+where:\
+- `x` is a single-digit number
+-`yyy` is the region
+-`zzzzz` is a 5-digit port number
 
-On your remote machine (anther computer which would like to control the above computer), open a terminal and run:
+On your remote machine (i.e. the computer you want to use to control the above computer), open a terminal and run:
 ```
 ssh <your_username>@x.tcp.yyy.ngrok.io -pzzzzz
 ```
@@ -57,7 +58,8 @@ E.g.
 ```
 ssh athena@6.us-cal-0.ngrok.io -p18893
 ```
-`athena`: username\
-`6`: the 1-digit number\
-`us-cal-0`: region\
-`18893`: 5-digit password
+where:\
+- `athena`: username
+- `6`: the single-digit number
+- `us-cal-0`: the region
+- `18893`: the 5-digit port number
