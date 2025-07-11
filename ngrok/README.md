@@ -45,7 +45,7 @@ chmod +x ngrok.sh
 ```
 The terminal will show ngrok information:\
 Next to `Forwarding`, you should see something like: *tcp://x.tcp.yyy.ngrok.io:zzzzz -> localhost:22*.\
-where:\
+where:
 - `x` is a single-digit number
 - `yyy` is the region
 - `zzzzz` is a 5-digit port number
@@ -58,7 +58,7 @@ E.g.
 ```
 ssh athena@6.us-cal-0.ngrok.io -p18893
 ```
-where:\
+where:
 - `athena`: username
 - `6`: the single-digit number
 - `us-cal-0`: the region
