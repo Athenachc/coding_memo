@@ -12,7 +12,35 @@ curl -sSL https://ngrok-agent.s3.amazonaws.com/ngrok.asc \
   && sudo apt install ngrok
 ```
 
+Then, authenticate ngrok with your account token:
+```
+ngrok config add-authtoken <your_ngrok_auth_token>
+```
+E.g.: 
 ```
 ngrok config add-authtoken 2tA89LzU3gZxKudtb5Acljij6WD_7NLdKZ2soDpVqhpUzQdcT
 ```
-You may need to add your credit card for verification. 
+You may also need to add your **credit card** for verification. 
+
+## Setup
+Create a .sh file:
+```
+nano ngrok.sh
+```
+
+Write the following:
+```
+cd /usr/local/bin
+./ngrok tcp 22 # for ssh purpose
+```
+Save and close the file. Then, add execute permission:
+
+```
+chmod +x ngrok.sh
+```
+
+## Run ngrok
+```
+./ngrok.sh
+```
+
