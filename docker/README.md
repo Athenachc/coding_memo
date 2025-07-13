@@ -1,7 +1,9 @@
 # Docker
 
 ## Install
-[Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
+- [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
+- [Linux post-installation steps for Docker Engine](https://docs.docker.com/engine/install/linux-postinstall/)
+- **DON'T** need to install Docker Desktop unless you know what you are doing.
 
 ## Cheatsheet
 ```
