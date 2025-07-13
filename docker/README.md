@@ -5,6 +5,62 @@
 - [Linux post-installation steps for Docker Engine](https://docs.docker.com/engine/install/linux-postinstall/)
 - **DON'T** need to install Docker Desktop unless you know what you are doing.
 
+## Docker with GPU
+If `--gpus all` fails despite working nvidia-smi, check if your Docker installation is missing NVIDIA Container Toolkit (nvidia-docker2). \
+Without it, Docker cannot forward GPU devices into containers even if your host has a GPU.
+
+- Install NVIDIA Container Toolkit
+```
+# 1. Define your distribution (ensure it is correct)
+distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+echo $distribution  # should print ubuntu22.04
+
+# 2. Add NVIDIA GPG key
+curl -s -L https://nvidia.github.io/libnvidia-container/gpgkey | sudo apt-key add -
+
+# 3. Add the repository list
+curl -s -L https://nvidia.github.io/libnvidia-container/$distribution/libnvidia-container.list | sudo tee /etc/apt/sources.list.d/nvidia-container.list
+
+# 4. Update package lists
+sudo apt-get update
+
+# 5. Install NVIDIA Container Toolkit
+sudo apt-get install -y nvidia-docker2
+
+# 6. Restart Docker daemon to apply changes
+sudo systemctl restart docker
+```
+- Verify installation
+  After restarting Docker, confirm integration:
+```
+sudo docker run --rm --gpus all nvidia/cuda:12.0.0-base-ubuntu22.04 nvidia-smi
+```
+
+## Solution of missing `xclock` inside container
+1. On host, run:
+  ```
+  echo $DISPLAY
+  ```
+  Your terminal should output `:0` or `:0.0`.
+  Then run:
+  ```
+  xhost +
+  ```
+  *Note: This disables all access control (unsafe on shared systems).* 
+  
+  For safer use:
+  ```
+  xhost +local:docker
+  ```
+
+2. Check if your container has `x11-apps` installed or not
+   Inside container, check:
+   ```
+   sudo apt update
+   sudo apt install -y x11-apps
+   xclock
+   ```
+   
 ## Cheatsheet
 ```
 docker image pull {image_name} # Pull an image
