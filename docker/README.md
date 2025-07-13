@@ -37,24 +37,25 @@ sudo docker run --rm --gpus all nvidia/cuda:12.0.0-base-ubuntu22.04 nvidia-smi
 ```
 
 ## Solution of missing `xclock` inside container
-1. Check if your X server acccepts connection
-  On host, run:
-  ```
-  echo $DISPLAY
-  ```
-  Your terminal should output `:0` or `:0.0`.
-  Then run:
-  ```
-  xhost +
-  ```
-  *Note: This disables all access control (unsafe on shared systems).* 
-  
-  For safer use:
-  ```
-  xhost +local:docker
-  ```
+1. Check if your X server accepts connection
+   On host, run:
+   ```
+   echo $DISPLAY
+   ```
+   Your terminal should output `:0` or `:0.0`.
+   
+   Then run:
+   ```
+   xhost +
+   ```
+   *Note: This disables all access control (unsafe on shared systems).* 
+    
+   For safer use:
+   ```
+   xhost +local:docker
+   ```
 
-2. Check if your container has `x11-apps` installed or not
+3. Check if your container has `x11-apps` installed or not
    Inside container, check:
    ```
    sudo apt update
