@@ -19,3 +19,11 @@ git branch -M main
 ```
 git push -u origin main
 ```
+
+```
+git config --global user.name <username>
+```
+
+```
+git config --global user.email <username>
+```
