@@ -1,7 +1,9 @@
 # Mac OS
-Remeber to create a new folder for download location for installing different Editior versions.
+1. Download [Unity Hub](https://unity.com/download) from its official website.
 
-Enable **Unity** on `System Settings` > `Privacy & Security` > `Full Disk Access`. 
+2. Create a new folder for `Setting` > `Install` > `Download locations` to install different Editior versions.
+
+3. Enable **Unity** on `System Settings` > `Privacy & Security` > `Full Disk Access`. 
 
 ## Clear old cache
 ```bash
