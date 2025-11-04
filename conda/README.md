@@ -1,4 +1,4 @@
 Show conda environment(s):
-```bash
+bash```
 conda env list
 ```
