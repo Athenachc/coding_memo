@@ -15,31 +15,31 @@
 1. Download latest version of [Ubuntu 22.04](https://releases.ubuntu.com/jammy/) and re-prepare an Ubuntu installation USB
 2. Re-do the steps in [Preparation](#preparation)
 ---
-## Install Terminator
+# Install Terminator
 ```
 sudo apt-get install terminator
 ```
 ---
-## Install Git
+# Install Git
 ```
 sudo apt install git
 ```
 
-## Install net-tools
+# Install net-tools
 ```
 sudo apt install net-tools
 ```
 
 ---
-## Install NVIDIA driver
-### 1. Install gcc-12
+# Install NVIDIA driver
+## 1. Install gcc-12
 ```bash
 sudo apt install --reinstall gcc-12
 sudo ln -s -f /usr/bin/gcc-12 /usr/bin/gcc
 gcc --version
 ```
 
-### 2. Block nouveau
+## 2. Block nouveau
 ```bash
 sudo gedit /etc/modprobe.d/blacklist.conf
 ```
@@ -64,7 +64,7 @@ lsmod | grep nouveau
 ```
 Nothing should be shown if nouveau is successfully blocked.
 
-###3. Download driver from Nnidia
+##3. Download driver from Nnidia
 
 ### 4. Update system
 ```bash
@@ -79,16 +79,16 @@ sudo apt install -y lightdm
 ```
 Choose "lightdm"
 
-### 6. Enter tty by pressing "ctrl + alt + f3"
+## 6. Enter tty by pressing "ctrl + alt + f3"
+ 
+## 7. Enter Ubuntu user name and password
    
-### 7. Enter Ubuntu user name and password
-   
-### 8. Close GUI
+## 8. Close GUI
 ```bash
 sudo service lightdm stop
 ```
 
-### 9. Install Nvidia driver
+## 9. Install Nvidia driver
 ```bash
 cd Downloads # location of driver
 chmod 755 NVIDIA-Linux-86_64-570.169.run #press tab to see the driver name
