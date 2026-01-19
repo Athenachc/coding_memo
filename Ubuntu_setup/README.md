@@ -230,7 +230,7 @@ timedatectl
 Then we can see *RTC in local TZ: **yes***
 
 ---
-## Change keyboard blacklight
+# Change keyboard blacklight
 1. Run
 ```
 ls /sys/class/leds/
@@ -255,7 +255,7 @@ echo X | sudo tee /sys/class/leds/asus::kbd_backlight/brightness
 Replace `X` with brightness vaule
 
 ---
-## Change maximum battery charging power
+# Change maximum battery charging power
 1. Install TLP
 ```
 sudo apt install tlp tlp-rdw
